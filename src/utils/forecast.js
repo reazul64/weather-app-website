@@ -11,7 +11,7 @@ const forecast = (latitude, longitude, callback) => {
             callback("Unable to access location service. Please specify a valid location identifier using the query parameter.", undefined);
         }
         else {
-            callback(undefined, `${body.current.weather_descriptions}. It is currently ${body.current.temperature} degrees celcius. But it feels like ${body.current.feelslike} degrees.`);
+            callback(undefined, `Date & Time: ${body.location.localtime}. ${body.current.weather_descriptions}. It is currently ${body.current.temperature} degrees celcius. But it feels like ${body.current.feelslike} degrees.`);
         }
     })
 }
